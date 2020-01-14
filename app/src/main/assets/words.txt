@@ -1,4 +1,4 @@
-grape purple small
-apple red_or_green big
-Android operating_system open_source
-IOS operating_system closed_source
+grape purple small round can_be_sour grows_on_trees have_seeds sweet cute juice
+apple red_or_green size_varies sweet_or_sour juice 
+Android operating_system open_source ffff tttt
+IOS operating_system closed_source gggg hhh

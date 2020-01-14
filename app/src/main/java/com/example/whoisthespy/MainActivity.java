@@ -14,18 +14,24 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<ArrayList<String>> pairs;
     private String goodWord;
     private String spyWord;
+    private ArrayList<String> goodBank;
+    private ArrayList<String> spyBank;
     private PC p1;
     private PC p2;
     private PC p3;
-    private String userWord;
-    private boolean userIsSpy;
-    private HashMap<String, ArrayList<String>> currWords = new HashMap<>();
+    private boolean userIsSpy = false;
+    private int round = 1;
+    private HashSet<String> descriptions = new HashSet<>();
+    private ArrayList<String> userDesc = new ArrayList<>();
 
     /**
      * A class representing PC players.
      */
     public class PC {
+        boolean isSpy = false;
         String word;
+        ArrayList<String> bank;
+        ArrayList<String> desc = new ArrayList<>();
         public PC(String word) { this.word = word; }
     }
 
@@ -71,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Could not load dictionary", Toast.LENGTH_LONG);
             toast.show();
         }
-        System.out.println(pairs.size());
     }
 
     public boolean onStart(View view) {
@@ -86,41 +91,84 @@ public class MainActivity extends AppCompatActivity {
             goodWord = pairs.get(rand1).get(1);
             spyWord = pairs.get(rand1).get(0);
         }
-        currWords.put(goodWord, new ArrayList<String>());
-        currWords.put(spyWord, new ArrayList<String>());
+        goodBank = wordMap.get(goodWord);
+        spyBank = wordMap.get(spyWord);
 
         // assign who is the spy
         int rand3 = r.nextInt(4);
         switch (rand3) {
             case 0:
                 userIsSpy = true;
-                userWord = spyWord;
                 p1 = new PC(goodWord);
+                p1.bank = goodBank;
                 p2 = new PC(goodWord);
+                p2.bank = goodBank;
                 p3 = new PC(goodWord);
+                p3.bank = goodBank;
                 break;
             case 1:
-                userIsSpy = false;
-                userWord = goodWord;
                 p1 = new PC(spyWord);
+                p1.bank = spyBank;
+                p1.isSpy = true;
                 p2 = new PC(goodWord);
+                p2.bank = goodBank;
                 p3 = new PC(goodWord);
+                p3.bank = goodBank;
                 break;
             case 2:
-                userIsSpy = false;
-                userWord = goodWord;
                 p1 = new PC(goodWord);
+                p1.bank = goodBank;
                 p2 = new PC(spyWord);
+                p2.bank = spyBank;
+                p2.isSpy = true;
                 p3 = new PC(goodWord);
+                p3.bank = goodBank;
                 break;
             case 3:
-                userIsSpy = false;
-                userWord = goodWord;
                 p1 = new PC(goodWord);
+                p1.bank = goodBank;
                 p2 = new PC(goodWord);
+                p2.bank = goodBank;
                 p3 = new PC(spyWord);
+                p3.bank = spyBank;
+                p3.isSpy = true;
                 break;
         }
+        if (round == 1) { oneRound(); }
         return true;
+    }
+
+    public void oneRound() {
+        System.out.println("ss");
+        Random r = new Random(System.currentTimeMillis());
+
+        // p1
+        int rand1 = r.nextInt(p1.bank.size());
+        while (descriptions.contains(p1.bank.get(rand1))) {
+            rand1 = r.nextInt(p1.bank.size());
+        }
+        p1.desc.add(p1.bank.get(rand1));
+        descriptions.add(p1.bank.get(rand1));
+
+        // p2
+        int rand2 = r.nextInt(p2.bank.size());
+        while (descriptions.contains(p2.bank.get(rand2))) {
+            rand2 = r.nextInt(p2.bank.size());
+        }
+        p2.desc.add(p2.bank.get(rand2));
+        descriptions.add(p2.bank.get(rand2));
+
+        // p3
+        int rand3 = r.nextInt(p3.bank.size());
+        while (descriptions.contains(p3.bank.get(rand3))) {
+            rand3 = r.nextInt(p3.bank.size());
+        }
+        p3.desc.add(p3.bank.get(rand3));
+        descriptions.add(p3.bank.get(rand3));
+
+        System.out.println(p1.desc.get(p1.desc.size()-1));
+        System.out.println(p2.desc.get(p2.desc.size()-1));
+        System.out.println(p3.desc.get(p3.desc.size()-1));
+        round++;
     }
 }
