@@ -6,7 +6,6 @@ import android.content.res.AssetManager;
 import android.os.*;
 import android.widget.*;
 import android.view.*;
-import android.support.*;
 import java.util.*;
 import java.io.*;
 
