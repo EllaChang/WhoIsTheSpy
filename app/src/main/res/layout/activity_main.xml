@@ -13,10 +13,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/cat1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat1" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -24,7 +25,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/cat2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -35,7 +36,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/cat3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -44,7 +45,7 @@
         android:id="@+id/imageView7"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/cat4"
@@ -53,36 +54,69 @@
 
     <TextView
         android:id="@+id/textpc1"
-        android:layout_width="211dp"
+        android:layout_width="280dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/pc_msg"
+        android:gravity="center_vertical"
         android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:fontFamily="@font/annie_use_your_telescope"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/namepc1" />
 
     <TextView
         android:id="@+id/textpc2"
-        android:layout_width="211dp"
+        android:layout_width="280dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/pc_msg"
+        android:gravity="center_vertical"
         android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:fontFamily="@font/annie_use_your_telescope"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/namepc2" />
 
     <TextView
         android:id="@+id/textpc3"
-        android:layout_width="211dp"
+        android:layout_width="280dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/pc_msg"
+        android:gravity="center_vertical"
         android:text="TextView"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:fontFamily="@font/annie_use_your_telescope"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/namepc3" />
+
+    <TextView
+        android:id="@+id/textuser"
+        android:layout_width="379dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/user_msg"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:fontFamily="@font/sonsie_one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/namepc1"
@@ -90,7 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="TextView"
+        android:text="Kiki"
+        app:fontFamily="@font/sonsie_one"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -100,7 +135,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="TextView"
+        android:text="Vivi"
+        app:fontFamily="@font/sonsie_one"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
@@ -110,7 +146,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="TextView"
+        android:text="Cici"
+        app:fontFamily="@font/sonsie_one"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -120,12 +157,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="TextView"
+        android:text="User12138"
+        app:fontFamily="@font/sonsie_one"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
     <ImageButton
         android:id="@+id/pc1"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="80dp"
@@ -178,5 +217,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pc1"
         app:layout_constraintTop_toBottomOf="@+id/pc2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Your word is:"
+        app:fontFamily="@font/sonsie_one"
+        app:layout_constraintBottom_toTopOf="@+id/textuser"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
