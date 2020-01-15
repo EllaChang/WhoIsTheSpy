@@ -174,17 +174,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="YES"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/no"
+        app:layout_constraintEnd_toStartOf="@+id/no" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
