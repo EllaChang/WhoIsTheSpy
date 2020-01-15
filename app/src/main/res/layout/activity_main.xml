@@ -14,9 +14,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="60dp"
+        android:src="@drawable/cat1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/cat1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -25,9 +25,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/cat2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:srcCompat="@drawable/cat2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -36,9 +36,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="60dp"
+        android:background="@drawable/cat3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:srcCompat="@drawable/cat3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -47,12 +47,12 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:background="@drawable/cat4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:srcCompat="@drawable/cat3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textpc1"
         android:layout_width="211dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
@@ -60,10 +60,10 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/namepc1" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textpc2"
         android:layout_width="211dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
@@ -71,10 +71,10 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/namepc2" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textpc3"
         android:layout_width="211dp"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
@@ -82,21 +82,10 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/namepc3" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="211dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView"
+        android:id="@+id/namepc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -106,7 +95,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/namepc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,7 +105,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/namepc3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -126,7 +115,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -134,4 +123,56 @@
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <ImageButton
+        android:id="@+id/pc1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cat1"
+        app:layout_constraintEnd_toStartOf="@+id/pc2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageButton
+        android:id="@+id/pc2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cat2"
+        app:layout_constraintEnd_toStartOf="@+id/pc3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageButton
+        android:id="@+id/pc3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/cat3" />
+
+    <Button
+        android:id="@+id/more"
+        android:layout_width="235dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="One More Round"
+        app:layout_constraintEnd_toEndOf="@+id/pc3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pc1"
+        app:layout_constraintTop_toBottomOf="@+id/pc2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
