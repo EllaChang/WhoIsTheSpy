@@ -1,42 +1,4 @@
 bee is_an_insect can_fly tiny scary_to_some_people always_busy dances_to_signal_peers live_in_groups furry
 butterfly is_an_insect can_fly tiny pretty has_a_well-known_related_theoretical_term fairy-like colorful there_are_museums_built_for_them related_to_flowers
 iPhone portable electronic_device by_Apple evolutionary updates_frequently can_be_used_for_entertainment has_different_sizes has_fierce_competitors some_people_say_it's_declining
-iPad portable electronic_device by_Apple 
-window
-door
-MacBook
-SurfacePro
-lipstick
-lipgloss
-Doritos
-chips
-Instagram
-Facebook
-doodles
-paintings
-horse
-donkey
-chicken
-duck
-chili
-wasabi
-bread
-cake
-SpiderMan
-BatMan
-glass
-mirror
-bicycle
-motorcycle
-subway
-bus
-pillow
-cushion
-pen
-pencil
-stairs
-elevator
-Christmas
-NewYear
-library
-bookstore
+iPad portable electronic_device by_Apple is_an_in-between can_take_photos can_play_music can_be_used_to_take_notes have_several_generations better_with_a_case
