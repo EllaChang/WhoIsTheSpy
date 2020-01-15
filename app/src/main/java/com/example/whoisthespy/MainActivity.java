@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     private int round = 1;
     private HashSet<String> descriptions = new HashSet<>();
     private ArrayList<String> userDesc = new ArrayList<>();
+    private ImageButton pc1 = (ImageButton) findViewById(R.id.pc1);
+    private ImageButton pc2 = (ImageButton) findViewById(R.id.pc2);
+    private ImageButton pc3 = (ImageButton) findViewById(R.id.pc3);
+    private Button more = (Button) findViewById(R.id.more);
+    private Button restart = (Button) findViewById(R.id.restart);
 
     /**
      * A class representing PC players.
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Could not load dictionary", Toast.LENGTH_LONG);
             toast.show();
         }
+        onStart(null);
     }
 
     public boolean onStart(View view) {
@@ -139,10 +145,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void oneRound() {
-        System.out.println("ss");
         Random r = new Random(System.currentTimeMillis());
 
-        // p1
+        // grab word description for p1
         int rand1 = r.nextInt(p1.bank.size());
         while (descriptions.contains(p1.bank.get(rand1))) {
             rand1 = r.nextInt(p1.bank.size());
@@ -150,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         p1.desc.add(p1.bank.get(rand1));
         descriptions.add(p1.bank.get(rand1));
 
-        // p2
+        // grab word description for p2
         int rand2 = r.nextInt(p2.bank.size());
         while (descriptions.contains(p2.bank.get(rand2))) {
             rand2 = r.nextInt(p2.bank.size());
@@ -158,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
         p2.desc.add(p2.bank.get(rand2));
         descriptions.add(p2.bank.get(rand2));
 
-        // p3
+        // grab word description for p3
         int rand3 = r.nextInt(p3.bank.size());
         while (descriptions.contains(p3.bank.get(rand3))) {
             rand3 = r.nextInt(p3.bank.size());
@@ -166,9 +171,48 @@ public class MainActivity extends AppCompatActivity {
         p3.desc.add(p3.bank.get(rand3));
         descriptions.add(p3.bank.get(rand3));
 
-        System.out.println(p1.desc.get(p1.desc.size()-1));
-        System.out.println(p2.desc.get(p2.desc.size()-1));
-        System.out.println(p3.desc.get(p3.desc.size()-1));
         round++;
+        // user can't ask for another round if there's already been 3 rounds
+        if (round == 3) {
+            more.setEnabled(false);
+        }
+    }
+
+    public void accuseP1() {
+        setContentView(R.layout.game_end);
+        if (p1.isSpy) {
+            // user wins
+        } else {
+            // user loses
+        }
+    }
+
+    public void accuseP2() {
+        setContentView(R.layout.game_end);
+        if (p2.isSpy) {
+            // user wins
+        } else {
+            // user loses
+        }
+    }
+
+    public void accuseP3() {
+        setContentView(R.layout.game_end);
+        if (p3.isSpy) {
+            // user wins
+        } else {
+            // user loses
+        }
+    }
+
+    public void restart() {
+        setContentView(R.layout.activity_main);
+        round = 1;
+        more.setEnabled(true);
+        onStart(null);
+    }
+
+    public void back() {
+        setContentView(R.layout.game_title);
     }
 }

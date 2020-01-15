@@ -16,7 +16,7 @@
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/cat1" />
+        android:background="@drawable/cat1" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -27,7 +27,7 @@
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:srcCompat="@drawable/cat2" />
+        android:background="@drawable/cat2" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -38,7 +38,7 @@
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:srcCompat="@drawable/cat3" />
+        android:background="@drawable/cat3" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -49,7 +49,7 @@
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:srcCompat="@drawable/cat3" />
+        android:background="@drawable/cat3" />
 
     <TextView
         android:id="@+id/textView2"
