@@ -174,5 +174,3 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pc1"
         app:layout_constraintTop_toBottomOf="@+id/pc2" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
