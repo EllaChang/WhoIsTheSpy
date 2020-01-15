@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
     private boolean userIsSpy = false;
     private int round = 1;
     private HashSet<String> descriptions = new HashSet<>();
-    private ArrayList<String> userDesc = new ArrayList<>();
-    private ImageButton pc1 = (ImageButton) findViewById(R.id.pc1);
-    private ImageButton pc2 = (ImageButton) findViewById(R.id.pc2);
-    private ImageButton pc3 = (ImageButton) findViewById(R.id.pc3);
-    private Button more = (Button) findViewById(R.id.more);
-    private Button restart = (Button) findViewById(R.id.restart);
+    private ImageButton pc1;
+    private ImageButton pc2;
+    private ImageButton pc3;
+    private Button more;
+    private Button yes;
+    private Button no;
 
     /**
      * A class representing PC players.
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.game_title);
         AssetManager assetManager = getAssets();
         wordMap = new HashMap<>();
         pairs = new ArrayList<>();
@@ -82,10 +82,17 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Could not load dictionary", Toast.LENGTH_LONG);
             toast.show();
         }
-        onStart(null);
     }
 
     public boolean onStart(View view) {
+        setContentView(R.layout.activity_main);
+        pc1 = (ImageButton) findViewById(R.id.pc1);
+        pc2 = (ImageButton) findViewById(R.id.pc2);
+        pc3 = (ImageButton) findViewById(R.id.pc3);
+        more = (Button) findViewById(R.id.more);
+        more.setEnabled(true);
+        round = 0;
+
         // pick currWord and spyWord
         Random r = new Random(System.currentTimeMillis());
         int rand1 = r.nextInt(pairs.size());
@@ -140,18 +147,23 @@ public class MainActivity extends AppCompatActivity {
                 p3.isSpy = true;
                 break;
         }
-        if (round == 1) { oneRound(); }
+        if (round == 0) oneRound(null);
         return true;
     }
 
-    public void oneRound() {
+    public void oneRound(View view) {
+        TextView textpc1 = findViewById(R.id.textpc1);
+        TextView textpc2 = findViewById(R.id.textpc2);
+        TextView textpc3 = findViewById(R.id.textpc3);
         Random r = new Random(System.currentTimeMillis());
+        //more = (Button) findViewById(R.id.more);
 
         // grab word description for p1
         int rand1 = r.nextInt(p1.bank.size());
         while (descriptions.contains(p1.bank.get(rand1))) {
             rand1 = r.nextInt(p1.bank.size());
         }
+        textpc1.setText(p1.bank.get(rand1));
         p1.desc.add(p1.bank.get(rand1));
         descriptions.add(p1.bank.get(rand1));
 
@@ -160,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         while (descriptions.contains(p2.bank.get(rand2))) {
             rand2 = r.nextInt(p2.bank.size());
         }
+        textpc2.setText(p2.bank.get(rand2));
         p2.desc.add(p2.bank.get(rand2));
         descriptions.add(p2.bank.get(rand2));
 
@@ -168,51 +181,102 @@ public class MainActivity extends AppCompatActivity {
         while (descriptions.contains(p3.bank.get(rand3))) {
             rand3 = r.nextInt(p3.bank.size());
         }
+        textpc3.setText(p3.bank.get(rand3));
         p3.desc.add(p3.bank.get(rand3));
         descriptions.add(p3.bank.get(rand3));
 
         round++;
+        System.out.println(round);
         // user can't ask for another round if there's already been 3 rounds
-        if (round == 3) {
+        if (round > 3) {
+            System.out.println("Sss");
             more.setEnabled(false);
         }
     }
 
-    public void accuseP1() {
+    public void accuseP1(View view) {
+        round = 0;
         setContentView(R.layout.game_end);
+        TextView p1text = findViewById(R.id.textpc1);
+        TextView p2text = findViewById(R.id.textpc2);
+        TextView p3text = findViewById(R.id.textpc3);
+        yes = findViewById(R.id.yes);
+        no = findViewById(R.id.no);
         if (p1.isSpy) {
             // user wins
+            p1text.setText("Ah! I thought I did well! Wanna play again?");
+            p2text.setText("Good job! Play again?");
+            p3text.setText("Nice my boi. Let's go again?");
         } else {
             // user loses
+            p1text.setText("Hey, I'm innocent! Wanna play again?");
+            if (p2.isSpy) {
+                p2text.setText("Haha it's me! Play again?");
+                p3text.setText("Ah man, it's p2! Let's go again?");
+            }
+            else {
+                p2text.setText("Come on man, it's p3! Play again?");
+                p3text.setText("Haha I fooled you! Let's go again?");
+            }
         }
     }
 
-    public void accuseP2() {
+    public void accuseP2(View view) {
+        round = 0;
         setContentView(R.layout.game_end);
+        TextView p1text = findViewById(R.id.textpc1);
+        TextView p2text = findViewById(R.id.textpc2);
+        TextView p3text = findViewById(R.id.textpc3);
+        yes = findViewById(R.id.yes);
+        no = findViewById(R.id.no);
         if (p2.isSpy) {
-            // user wins
+            p2text.setText("How did you know it was me?! Play again?");
+            p1text.setText("You ARE a genius. Wanna play again?");
+            p3text.setText("Sherlock Holmes would admire you, too. Let's go again?");
         } else {
-            // user loses
+            p2text.setText("I feel hurt that you suspected me. Go again?");
+            if (p1.isSpy) {
+                p1text.setText("LOL it's me! Wanna play again?");
+                p3text.setText("Of course it's p1! Play again?");
+            } else {
+                p1text.setText("It's p3! Wanna play again?");
+                p3text.setText("Yasss I fooled you! Play again?");
+            }
         }
     }
 
-    public void accuseP3() {
+    public void accuseP3(View view) {
+        round = 0;
         setContentView(R.layout.game_end);
+        TextView p1text = findViewById(R.id.textpc1);
+        TextView p2text = findViewById(R.id.textpc2);
+        TextView p3text = findViewById(R.id.textpc3);
+        yes = findViewById(R.id.yes);
+        no = findViewById(R.id.no);
         if (p3.isSpy) {
-            // user wins
+            p3text.setText("Did you cheat?! Shall we go again?");
+            p1text.setText("What a detective you are. Play again?");
+            p2text.setText("Nicely done my boi. Let's go again?");
         } else {
-            // user loses
+            p3text.setText("How could you think it was me! Go again?");
+            if (p1.isSpy) {
+                p1text.setText("LOL it's me! Wanna play again?");
+                p2text.setText("Of course it's p1! Play again?");
+            } else {
+                p1text.setText("It's p2! Wanna play again?");
+                p2text.setText("Yasss I fooled you! Play again?");
+            }
         }
     }
 
-    public void restart() {
+    public void restart(View view) {
+        round = 0;
         setContentView(R.layout.activity_main);
-        round = 1;
-        more.setEnabled(true);
         onStart(null);
     }
 
-    public void back() {
+    public void back(View view) {
+        round = 0;
         setContentView(R.layout.game_title);
     }
 }
