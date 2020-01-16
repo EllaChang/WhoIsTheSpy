@@ -324,6 +324,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void rules(View view) {
+        setContentView(R.layout.rules);
+    }
+
     public void restart(View view) {
         round = 0;
         descriptions.clear();

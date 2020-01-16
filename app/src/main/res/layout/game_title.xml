@@ -150,7 +150,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:gravity="center_vertical"
-                android:text="Here is the rules..."
+                android:onClick="rules"
+                android:text="Hit me up if you wanna hear about the rules!"
+                android:textSize="14sp"
                 app:fontFamily="monospace"
                 app:layout_constraintStart_toEndOf="@+id/doge"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />

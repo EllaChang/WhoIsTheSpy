@@ -85,7 +85,7 @@
         android:background="@drawable/pc_msg"
         android:gravity="center_vertical"
         android:padding="8dp"
-        android:text="our goal is to identify the spy within 3 rounds. Good luck! "
+        android:text="Your goal is to identify the spy within 3 rounds. Good luck! "
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:fontFamily="monospace"
@@ -93,12 +93,13 @@
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <Button
-        android:id="@+id/return"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
+        android:onClick="back"
         android:text="Return"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
