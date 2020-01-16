@@ -38,6 +38,7 @@
                 android:id="@+id/doge"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/dog2" />
@@ -154,6 +155,52 @@
                 app:fontFamily="monospace"
                 app:layout_constraintStart_toEndOf="@+id/doge"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doge" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vivi" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cici" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spygame" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dog2" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="104dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
