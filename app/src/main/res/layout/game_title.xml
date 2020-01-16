@@ -55,18 +55,18 @@
             <TextView
                 android:id="@+id/group1"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginBottom="10dp"
-                android:background="#015668"
-                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:onClick="onStart"
                 android:shadowColor="#00FFFFFF"
                 android:text="Who Is The Spy?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/background_light"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
                 app:fontFamily="@font/sonsie_one"
-                app:layout_constraintBottom_toBottomOf="@+id/spygame"
-                app:layout_constraintStart_toEndOf="@+id/spygame" />
+                app:layout_constraintStart_toEndOf="@+id/spygame"
+                app:layout_constraintTop_toTopOf="@+id/spygame" />
 
             <ImageView
                 android:id="@+id/vivi"
@@ -145,6 +145,61 @@
                 app:layout_constraintTop_toTopOf="@+id/vivi" />
 
             <TextView
+                android:id="@+id/uservivi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Cici"
+                app:fontFamily="@font/sonsie_one"
+                app:layout_constraintStart_toEndOf="@+id/cici"
+                app:layout_constraintTop_toTopOf="@+id/cici" />
+
+            <TextView
+                android:id="@+id/uservivi4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Mom"
+                app:fontFamily="@font/sonsie_one"
+                app:layout_constraintStart_toEndOf="@+id/dog2"
+                app:layout_constraintTop_toTopOf="@+id/dog2" />
+
+            <TextView
+                android:id="@+id/uservivi6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Sis"
+                app:fontFamily="@font/sonsie_one"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+            <TextView
+                android:id="@+id/uservivi5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Dad"
+                app:fontFamily="@font/sonsie_one"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="@+id/imageView13" />
+
+            <TextView
+                android:id="@+id/uservivi7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Developer"
+                app:fontFamily="@font/sonsie_one"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toTopOf="@+id/imageView14" />
+
+            <TextView
                 android:id="@+id/rules"
                 android:layout_width="251dp"
                 android:layout_height="76dp"
@@ -152,60 +207,109 @@
                 android:layout_marginLeft="8dp"
                 android:gravity="center_vertical"
                 android:onClick="rules"
+                android:padding="5dp"
                 android:text="Hit me up if you wanna hear about the rules!"
                 android:textSize="14sp"
                 app:fontFamily="monospace"
                 app:layout_constraintStart_toEndOf="@+id/doge"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-            <View
-                android:id="@+id/view"
-                android:layout_height="1dp"
-                android:layout_marginTop="3dp"
-                android:background="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/doge" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="yoo man Let’s play Who is the Spy in the group chat! "
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/vivi"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi" />
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="3dp"
-                android:background="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vivi" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="I saw you, User12138..."
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/cici"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi3" />
 
-            <View
-                android:id="@+id/view3"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="3dp"
-                android:background="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cici" />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Your friendo are in the room waiting for you. Click to start the game."
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/spygame"
+                app:layout_constraintTop_toBottomOf="@+id/group1" />
 
-            <View
-                android:id="@+id/view4"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="3dp"
-                android:background="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spygame" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Did you finish your homework? I am watching you."
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/dog2"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi4" />
 
-            <View
-                android:id="@+id/view5"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="3dp"
-                android:background="@android:color/darker_gray"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dog2" />
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="104dp" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Don't tell Mom Frankie is in my room!!!!!!!"
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/imageView12"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi6" />
 
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Ask Your Mom."
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi5" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="251dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="Made by two human slaves, Ella Chang &amp; Lillian Jiang"
+                android:textSize="14sp"
+                app:fontFamily="monospace"
+                app:layout_constraintStart_toEndOf="@+id/imageView14"
+                app:layout_constraintTop_toBottomOf="@+id/uservivi7" /></androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
