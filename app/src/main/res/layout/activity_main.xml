@@ -187,36 +187,28 @@
         android:onClick="accuseP2"
         android:scaleType="fitCenter"
         android:src="@drawable/cat2"
-        app:layout_constraintEnd_toStartOf="@+id/pc3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageButton
         android:id="@+id/pc3"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:onClick="accuseP3"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/pc1"
+        app:layout_constraintTop_toBottomOf="@+id/pc1"
         app:srcCompat="@drawable/cat3" />
 
     <Button
         android:id="@+id/more"
         android:layout_width="235dp"
         android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:onClick="oneRound"
         android:text="One More Round"
-        app:layout_constraintEnd_toEndOf="@+id/pc3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/pc1"
-        app:layout_constraintTop_toBottomOf="@+id/pc2" />
+        app:layout_constraintEnd_toEndOf="@+id/pc4"
+        app:layout_constraintTop_toBottomOf="@+id/pc3" />
 
     <TextView
         android:id="@+id/textView"
@@ -228,5 +220,16 @@
         app:fontFamily="@font/sonsie_one"
         app:layout_constraintBottom_toTopOf="@+id/textuser"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/pc4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/pc3"
+        app:layout_constraintTop_toBottomOf="@+id/pc2"
+        app:srcCompat="@drawable/cat4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
