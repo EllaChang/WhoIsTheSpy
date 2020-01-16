@@ -45,7 +45,7 @@
                 android:text="Who Is The Spy?"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/background_light"
-                app:fontFamily="@font/faster_one" />
+                app:fontFamily="@font/sonsie_one" />
 
         </LinearLayout>
     </ScrollView>
