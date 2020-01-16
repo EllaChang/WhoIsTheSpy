@@ -179,6 +179,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="restart"
         android:text="YES"
         app:layout_constraintBaseline_toBaselineOf="@+id/no"
         app:layout_constraintEnd_toStartOf="@+id/no" />
@@ -190,6 +191,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="back"
         android:text="NO"
         app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/username" />

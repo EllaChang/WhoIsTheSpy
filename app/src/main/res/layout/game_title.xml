@@ -40,6 +40,7 @@
                 android:layout_height="match_parent"
                 android:background="#263f44"
                 android:gravity="center"
+                android:onClick="onStart"
                 android:shadowColor="#00FFFFFF"
                 android:text="Who Is The Spy?"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
