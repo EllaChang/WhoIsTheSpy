@@ -61,10 +61,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/pc_msg"
         android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="TextView"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        app:fontFamily="@font/annie_use_your_telescope"
+        android:textSize="14sp"
+        app:fontFamily="monospace"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/namepc1" />
 
@@ -77,10 +78,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/pc_msg"
         android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="TextView"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        app:fontFamily="@font/annie_use_your_telescope"
+        android:textSize="14sp"
+        app:fontFamily="monospace"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/namepc2" />
 
@@ -93,10 +95,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/pc_msg"
         android:gravity="center_vertical"
+        android:paddingLeft="10dp"
         android:text="TextView"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        app:fontFamily="@font/annie_use_your_telescope"
+        android:textSize="14sp"
+        app:fontFamily="monospace"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/namepc3" />
 
