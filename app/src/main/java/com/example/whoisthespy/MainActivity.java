@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         while (descriptions.contains(p1.bank.get(rand1))) {
             rand1 = r.nextInt(p1.bank.size());
         }
-        textpc1.setText(p1.bank.get(rand1));
+        textpc1.setText(" " + p1.bank.get(rand1));
         p1.desc.add(p1.bank.get(rand1));
         descriptions.add(p1.bank.get(rand1));
 
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         while (descriptions.contains(p2.bank.get(rand2))) {
             rand2 = r.nextInt(p2.bank.size());
         }
-        textpc2.setText(p2.bank.get(rand2));
+        textpc2.setText(" " + p2.bank.get(rand2));
         p2.desc.add(p2.bank.get(rand2));
         descriptions.add(p2.bank.get(rand2));
 
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         while (descriptions.contains(p3.bank.get(rand3))) {
             rand3 = r.nextInt(p3.bank.size());
         }
-        textpc3.setText(p3.bank.get(rand3));
+        textpc3.setText(" " + p3.bank.get(rand3));
         p3.desc.add(p3.bank.get(rand3));
         descriptions.add(p3.bank.get(rand3));
 
@@ -216,22 +216,22 @@ public class MainActivity extends AppCompatActivity {
         textuser.setText(userWord);
         if (p1.isSpy) {
             // user wins
-            p1text.setText("Ah! I thought I did well! Wanna play again?");
-            p2text.setText("Good job! Play again?");
-            p3text.setText("Nice my boi. Let's go again?");
+            p1text.setText(" Ah! I thought I did well! Wanna play again?");
+            p2text.setText(" Good job! Play again?");
+            p3text.setText(" Nice my boi. Let's go again?");
         } else {
             // user loses
-            p1text.setText("Hey, I'm innocent! Wanna play again?");
+            p1text.setText(" Hey, I'm innocent! Wanna play again?");
             if (p2.isSpy) {
-                p2text.setText("Haha it's me! Play again?");
-                p3text.setText("Ah man, it's Vivi! Let's go again?");
+                p2text.setText(" Haha it's me! Play again?");
+                p3text.setText(" Ah man, it's Vivi! Let's go again?");
             }
             else if (p3.isSpy) {
-                p2text.setText("Come on man, it's Cici! Play again?");
-                p3text.setText("Haha I fooled you! Let's go again?");
+                p2text.setText(" Come on man, it's Cici! Play again?");
+                p3text.setText(" Haha I fooled you! Let's go again?");
             } else {
-                p2text.setText("It's been you all along?! Play again?");
-                p3text.setText("Ah man, it's you! Let's go again?");
+                p2text.setText(" It's been you all along?! Play again?");
+                p3text.setText(" Ah man, it's you! Let's go again?");
             }
         }
     }
@@ -246,20 +246,20 @@ public class MainActivity extends AppCompatActivity {
         textuser = findViewById(R.id.textuser);
         textuser.setText(userWord);
         if (p2.isSpy) {
-            p2text.setText("How did you know it was me?! Play again?");
-            p1text.setText("You ARE a genius. Wanna play again?");
-            p3text.setText("Sherlock Holmes would love ya. Go again?");
+            p2text.setText(" How did you know it was me?! Play again?");
+            p1text.setText(" You ARE a genius. Wanna play again?");
+            p3text.setText(" Sherlock Holmes would love ya. Go again?");
         } else {
-            p2text.setText("How could you, the spy, suspect me. Go again?");
+            p2text.setText(" How could you, the spy, suspect me. Go again?");
             if (p1.isSpy) {
-                p1text.setText("LOL it's me! Wanna play again?");
-                p3text.setText("Of course it's Kiki! Play again?");
+                p1text.setText(" LOL it's me! Wanna play again?");
+                p3text.setText(" Of course it's Kiki! Play again?");
             } else if (p3.isSpy) {
-                p1text.setText("It's Cici! Wanna play again?");
-                p3text.setText("Yasss I fooled you! Play again?");
+                p1text.setText(" It's Cici! Wanna play again?");
+                p3text.setText(" Yasss I fooled you! Play again?");
             } else {
-                p1text.setText("Ah it's you man! Wanna play again?");
-                p3text.setText("It's been you all this time! Play again?");
+                p1text.setText(" Ah it's you man! Wanna play again?");
+                p3text.setText(" It's been you all this time! Play again?");
             }
         }
     }
@@ -274,20 +274,20 @@ public class MainActivity extends AppCompatActivity {
         textuser = findViewById(R.id.textuser);
         textuser.setText(userWord);
         if (p3.isSpy) {
-            p3text.setText("Did you cheat?! Shall we go again?");
-            p1text.setText("What a detective you are. Play again?");
-            p2text.setText("Nicely done my boi. Let's go again?");
+            p3text.setText(" Did you cheat?! Shall we go again?");
+            p1text.setText(" What a detective you are. Play again?");
+            p2text.setText(" Nicely done my boi. Let's go again?");
         } else {
-            p3text.setText("How could you think it was me! Go again?");
+            p3text.setText(" How could you think it was me! Go again?");
             if (p1.isSpy) {
-                p1text.setText("LOL it's me! Wanna play again?");
-                p2text.setText("Of course it's Kiki! Play again?");
+                p1text.setText(" LOL it's me! Wanna play again?");
+                p2text.setText(" Of course it's Kiki! Play again?");
             } else if (p2.isSpy) {
-                p1text.setText("It's Vivi! Wanna play again?");
-                p2text.setText("Yasss I fooled you! Play again?");
+                p1text.setText(" It's Vivi! Wanna play again?");
+                p2text.setText(" Yasss I fooled you! Play again?");
             } else {
-                p1text.setText("It's you! Wanna play again?");
-                p2text.setText("It's not Cici but you! Play again?");
+                p1text.setText(" It's you! Wanna play again?");
+                p2text.setText(" It's not Cici but you! Play again?");
             }
         }
     }
@@ -304,22 +304,22 @@ public class MainActivity extends AppCompatActivity {
         textuser = findViewById(R.id.textuser);
         textuser.setText(userWord);
         if (userIsSpy) {
-            p1text.setText("LOL you're good at this. Play again?");
-            p2text.setText("Nicely done my spy. Let's go again?");
-            p3text.setText("LMAO so it's you! Shall we go again?");
+            p1text.setText(" LOL you're good at this. Play again?");
+            p2text.setText(" Nicely done my spy. Let's go again?");
+            p3text.setText(" LMAO so it's you! Shall we go again?");
         } else {
             if (p1.isSpy) {
-                p1text.setText("It's me LMAO. Play again?");
-                p2text.setText("It's Kiki! Let's go again?");
-                p3text.setText("Man, you're not the spy! Shall we go again?");
+                p1text.setText(" It's me LMAO. Play again?");
+                p2text.setText(" It's Kiki! Let's go again?");
+                p3text.setText(" Man, you're not the spy! Shall we go again?");
             } else if (p2.isSpy) {
-                p1text.setText("Of course it's Vivi! Play again?");
-                p2text.setText("Nicely done my boi. Let's go again?");
-                p3text.setText("Did you cheat?! Shall we go again?");
+                p1text.setText(" Of course it's Vivi! Play again?");
+                p2text.setText(" Nicely done my boi. Let's go again?");
+                p3text.setText(" Did you cheat?! Shall we go again?");
             } else {
-                p1text.setText("It's Cici! Play again?");
-                p2text.setText("It's not you. Let's go again?");
-                p3text.setText("LOL it's actually me! Shall we go again?");
+                p1text.setText(" It's Cici! Play again?");
+                p2text.setText(" It's not you. Let's go again?");
+                p3text.setText(" LOL it's actually me! Shall we go again?");
             }
         }
     }
