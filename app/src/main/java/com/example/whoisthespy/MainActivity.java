@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private PC p2;
     private PC p3;
     private boolean userIsSpy = false;
-    private int round = 1;
+    private String userWord;
+    private int round = 0;
     private HashSet<String> descriptions = new HashSet<>();
     private ImageButton pc1;
     private ImageButton pc2;
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         more.setEnabled(true);
         round = 0;
         textuser = findViewById(R.id.textuser);
+        descriptions.clear();
 
         // pick currWord and spyWord
         Random r = new Random(System.currentTimeMillis());
@@ -115,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
             case 0:
                 userIsSpy = true;
                 textuser.setText(spyWord);
+                userWord = spyWord;
                 p1 = new PC(goodWord);
                 p1.bank = goodBank;
                 p2 = new PC(goodWord);
@@ -124,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 1:
                 textuser.setText(goodWord);
+                userWord = goodWord;
                 p1 = new PC(spyWord);
                 p1.bank = spyBank;
                 p1.isSpy = true;
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 textuser.setText(goodWord);
+                userWord = goodWord;
                 p1 = new PC(goodWord);
                 p1.bank = goodBank;
                 p2 = new PC(spyWord);
@@ -144,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3:
                 textuser.setText(goodWord);
+                userWord = goodWord;
                 p1 = new PC(goodWord);
                 p1.bank = goodBank;
                 p2 = new PC(goodWord);
@@ -162,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         TextView textpc2 = findViewById(R.id.textpc2);
         TextView textpc3 = findViewById(R.id.textpc3);
         Random r = new Random(System.currentTimeMillis());
-        //more = (Button) findViewById(R.id.more);
 
         // grab word description for p1
         int rand1 = r.nextInt(p1.bank.size());
@@ -194,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
         round++;
         System.out.println(round);
         // user can't ask for another round if there's already been 3 rounds
-        if (round > 3) {
+        if (round > 2) {
             descriptions.clear();
             more.setEnabled(false);
         }
@@ -202,12 +207,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void accuseP1(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.game_end);
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        yes = findViewById(R.id.yes);
-        no = findViewById(R.id.no);
+        textuser = findViewById(R.id.textuser);
+        textuser.setText(userWord);
         if (p1.isSpy) {
             // user wins
             p1text.setText("Ah! I thought I did well! Wanna play again?");
@@ -232,16 +238,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void accuseP2(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.game_end);
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        yes = findViewById(R.id.yes);
-        no = findViewById(R.id.no);
+        textuser = findViewById(R.id.textuser);
+        textuser.setText(userWord);
         if (p2.isSpy) {
             p2text.setText("How did you know it was me?! Play again?");
             p1text.setText("You ARE a genius. Wanna play again?");
-            p3text.setText("Sherlock Holmes would admire you, too. Let's go again?");
+            p3text.setText("Sherlock Holmes would love ya. Go again?");
         } else {
             p2text.setText("How could you, the spy, suspect me. Go again?");
             if (p1.isSpy) {
@@ -259,12 +266,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void accuseP3(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.game_end);
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        yes = findViewById(R.id.yes);
-        no = findViewById(R.id.no);
+        textuser = findViewById(R.id.textuser);
+        textuser.setText(userWord);
         if (p3.isSpy) {
             p3text.setText("Did you cheat?! Shall we go again?");
             p1text.setText("What a detective you are. Play again?");
@@ -286,16 +294,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void accuseMe(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.game_end);
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
         yes = findViewById(R.id.yes);
         no = findViewById(R.id.no);
+        textuser = findViewById(R.id.textuser);
+        textuser.setText(userWord);
         if (userIsSpy) {
             p1text.setText("LOL you're good at this. Play again?");
             p2text.setText("Nicely done my spy. Let's go again?");
-            p3text.setText("Did you cheat?! Shall we go again?");
+            p3text.setText("LMAO so it's you! Shall we go again?");
         } else {
             if (p1.isSpy) {
                 p1text.setText("It's me LMAO. Play again?");
@@ -306,21 +317,23 @@ public class MainActivity extends AppCompatActivity {
                 p2text.setText("Nicely done my boi. Let's go again?");
                 p3text.setText("Did you cheat?! Shall we go again?");
             } else {
-                p1text.setText("What a detective you are. Play again?");
-                p2text.setText("Nicely done my boi. Let's go again?");
-                p3text.setText("Did you cheat?! Shall we go again?");
+                p1text.setText("It's Cici! Play again?");
+                p2text.setText("It's not you. Let's go again?");
+                p3text.setText("LOL it's actually me! Shall we go again?");
             }
         }
     }
 
     public void restart(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.activity_main);
         onStart(null);
     }
 
     public void back(View view) {
         round = 0;
+        descriptions.clear();
         setContentView(R.layout.game_title);
     }
 }
