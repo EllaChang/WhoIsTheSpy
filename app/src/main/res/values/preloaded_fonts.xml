@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/allerta</item>
+        <item>@font/amiko_bold</item>
         <item>@font/annie_use_your_telescope</item>
+        <item>@font/assistant_bold</item>
+        <item>@font/baloo</item>
         <item>@font/bubbler_one</item>
+        <item>@font/bungee</item>
         <item>@font/faster_one</item>
+        <item>@font/finger_paint</item>
+        <item>@font/oxygen</item>
         <item>@font/sonsie_one</item>
+        <item>@font/ubuntu_medium</item>
     </array>
 </resources>

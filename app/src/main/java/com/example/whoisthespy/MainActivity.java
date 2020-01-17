@@ -212,8 +212,6 @@ public class MainActivity extends AppCompatActivity {
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        textuser = findViewById(R.id.textuser);
-        textuser.setText(userWord);
         if (p1.isSpy) {
             // user wins
             p1text.setText("Ah! I thought I did well! Wanna play again?");
@@ -243,8 +241,6 @@ public class MainActivity extends AppCompatActivity {
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        textuser = findViewById(R.id.textuser);
-        textuser.setText(userWord);
         if (p2.isSpy) {
             p2text.setText("How did you know it was me?! Play again?");
             p1text.setText("You ARE a genius. Wanna play again?");
@@ -271,8 +267,6 @@ public class MainActivity extends AppCompatActivity {
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        textuser = findViewById(R.id.textuser);
-        textuser.setText(userWord);
         if (p3.isSpy) {
             p3text.setText("Did you cheat?! Shall we go again?");
             p1text.setText("What a detective you are. Play again?");
@@ -299,10 +293,6 @@ public class MainActivity extends AppCompatActivity {
         TextView p1text = findViewById(R.id.textpc1);
         TextView p2text = findViewById(R.id.textpc2);
         TextView p3text = findViewById(R.id.textpc3);
-        yes = findViewById(R.id.yes);
-        no = findViewById(R.id.no);
-        textuser = findViewById(R.id.textuser);
-        textuser.setText(userWord);
         if (userIsSpy) {
             p1text.setText("LOL you're good at this. Play again?");
             p2text.setText("Nicely done my spy. Let's go again?");
